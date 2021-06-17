@@ -10,5 +10,11 @@ public class VerticleAA extends AbstractVerticle {
     System.out.println("Start: " + getClass().getName() + "\t" + Thread.currentThread().getName());
     startPromise.complete();
   }
+  @Override
+  public void stop(final Promise<Void> stopPromise)
+  {
+    System.out.println("Stop: "  + getClass().getName() + "\t" + Thread.currentThread().getName());
+    stopPromise.complete();
+  }
 }
 

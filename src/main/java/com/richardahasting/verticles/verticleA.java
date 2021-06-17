@@ -15,8 +15,8 @@ public class verticleA extends AbstractVerticle {
     vertx.deployVerticle(new VerticleAA());
     vertx.deployVerticle(new VerticleAB());
     vertx.deployVerticle(new VerticleAA());
-    vertx.deployVerticle(new VerticleAB());
-
+    vertx.deployVerticle(new VerticleAA(), whenDeployed -> {
+      vertx.undeploy(whenDeployed.result());});
     startPromise.complete();
   }
 }
