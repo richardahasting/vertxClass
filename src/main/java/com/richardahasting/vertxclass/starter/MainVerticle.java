@@ -10,6 +10,7 @@ public class MainVerticle extends AbstractVerticle {
     var vertx = Vertx.vertx();
     vertx.deployVerticle(new MainVerticle());
   }
+
   @Override
   public void start(Promise<Void> startPromise) throws Exception {
     vertx.createHttpServer().requestHandler(req -> {
