@@ -7,7 +7,7 @@ import io.vertx.core.impl.logging.LoggerFactory;
 
 public class verticleA extends AbstractVerticle {
 
-  final static Logger LOG = LoggerFactory.getLogger(MainVerticle.class);
+  final static Logger LOG = LoggerFactory.getLogger(verticleA.class);
   @Override
   public void start(Promise<Void> startPromise) throws Exception {
     LOG.debug("Start: " + getClass().getName() + "\t" + Thread.currentThread().getName());
