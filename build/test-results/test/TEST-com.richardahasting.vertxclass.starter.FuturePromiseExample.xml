@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.richardahasting.vertxclass.starter.FuturePromiseExample" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-03T18:33:29" hostname="Hasting-Server" time="0.689">
+  <properties/>
+  <testcase name="future_success(Vertx, VertxTestContext)" classname="com.richardahasting.vertxclass.starter.FuturePromiseExample" time="0.689"/>
+  <system-out><![CDATA[?[34m13:33:29.733?[m [Test worker] ?[36mDEBUG?[m ?[35mc.r.v.s.FuturePromiseExample?[m - Start
+?[34m13:33:29.741?[m [Test worker] ?[36mDEBUG?[m ?[35mc.r.v.s.FuturePromiseExample?[m - Ending
+?[34m13:33:30.240?[m [vert.x-eventloop-thread-0] ?[36mDEBUG?[m ?[35mc.r.v.s.FuturePromiseExample?[m - Result: Success
+?[34m13:33:30.241?[m [vert.x-eventloop-thread-0] ?[36mDEBUG?[m ?[35mc.r.v.s.FuturePromiseExample?[m - Success
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
