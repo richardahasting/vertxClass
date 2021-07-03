@@ -1,12 +1,13 @@
 package com.richardahasting.vertxclass.starter.json;
 
 import io.vertx.core.json.JsonArray;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 import io.vertx.core.json.JsonObject;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class JsonObjectExample {

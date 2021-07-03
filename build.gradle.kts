@@ -6,6 +6,9 @@ plugins {
   application
   id("com.github.johnrengelman.shadow") version "7.0.0"
   id( "io.spring.dependency-management") version "1.0.1.RELEASE"
+  id("com.google.cloud.tools.jib") version "2.7.1"
+  id("com.github.ben-manes.versions") version "0.38.0"
+
 }
 
 group = "com.richardahasting.vertxclass"
@@ -15,7 +18,7 @@ repositories {
   mavenCentral()
 }
 
-val vertxVersion = "4.1.0"
+val vertxVersion = "4.1.1"
 val junitJupiterVersion = "5.7.0"
 val jacksonVersion = "2.11.3"
 
@@ -39,16 +42,15 @@ dependencyManagement {
 
 dependencies {
   implementation(platform("io.vertx:vertx-stack-depchain:$vertxVersion"))
-  implementation("io.vertx:vertx-core")
+  implementation("io.vertx:vertx-core:$vertxVersion")
   implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
   implementation("org.apache.logging.log4j:log4j-api")
   implementation("org.apache.logging.log4j:log4j-core")
   implementation("org.apache.logging.log4j:log4j-slf4j-impl")
   implementation("org.slf4j:slf4j-api:1.7.30")
-    implementation("junit:junit:4.13.1")
   implementation("org.junit.jupiter:junit-jupiter:5.7.0")
-
-  testImplementation("io.vertx:vertx-junit5")
+  implementation("io.vertx:vertx-junit5:4.1.1")
+  testImplementation("io.vertx:vertx-junit5:4.1.1")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
 }
 
