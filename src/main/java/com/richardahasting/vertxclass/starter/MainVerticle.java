@@ -1,11 +1,15 @@
 package com.richardahasting.vertxclass.starter;
 
+import com.richardahasting.vertxclass.starter.json.PingPongExample;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Promise;
 import io.vertx.core.Vertx;
+import io.vertx.core.impl.logging.Logger;
+import io.vertx.core.impl.logging.LoggerFactory;
 
 public class MainVerticle extends AbstractVerticle {
 
+  final static Logger LOG = LoggerFactory.getLogger(MainVerticle.class);
   public static void demain(String[] args) {
     var vertx = Vertx.vertx();
     vertx.deployVerticle(new MainVerticle());
@@ -24,6 +28,9 @@ public class MainVerticle extends AbstractVerticle {
       } else {
         startPromise.fail(http.cause());
       }
+    });
+    vertx.setPeriodic(560, id -> {
+      LOG.debug("Redeploy");
     });
   }
 }
